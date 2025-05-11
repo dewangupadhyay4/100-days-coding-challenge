@@ -7,18 +7,37 @@
 # func(n1,n2)
 
 #-------------------------------------------------------------------------------------------------------------------------------------------
-def largest(nums):
-    print(max(nums))
+# def largest(nums):
+#     print(max(nums))
 
-largest([23,45,12,56,222,22])
+# largest([23,45,12,56,222,22])
 
-#-------------------------------------------------------------------------------------------------------------------------------------------
-def even_odd(num):
-    if num % 2 == 0:
-        print(f"entered {num} is even")
+# #-------------------------------------------------------------------------------------------------------------------------------------------
+# def even_odd(num):
+#     if num % 2 == 0:
+#         print(f"entered {num} is even")
+#     else:
+#         print(f"entered {num} is odd")
+
+# even_odd(119)
+
+# #-------------------------------------------------------------------------------------------------------------------------------------------
+
+def calulator(num1, num2, operation):
+    if operation=='+':
+        return num1+num2
+    elif operation=='-':
+        return num1-num2
+    elif operation=='*':
+        return num1*num2
+    elif operation=='/':
+        return num1/num2
     else:
-        print(f"entered {num} is odd")
+        print("You have entered wrong input")
 
-even_odd(119)
+n1=int(input("Enter the first number: "))
+n2=int(input("Enter the second number: "))
+op=str(input("Enter the operation: "))
+print(calulator(n1,n2,op))
 
 
