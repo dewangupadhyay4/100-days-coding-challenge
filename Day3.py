@@ -1,59 +1,59 @@
 # #for loop
 
-# num=int(input("Enter the number till you want counting: "))
-# for i in range(1,num+1):
-#     print(i)
+num=int(input("Enter the number till you want counting: "))
+for i in range(1,num+1):
+    print(i)
 #----------------------------------------------------------------------------------------------------------------------------------------------
 
 #while loop
 
-# num=2
-# while num<=50:
-#     print(num)
-#     num+=2
+num=2
+while num<=50:
+    print(num)
+    num+=2
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 # break
-# num=11
-# for i in range(1,num):
-#     if i==6:
-#         break
-#     else:
-#         print(i)
+num=11
+for i in range(1,num):
+    if i==6:
+        break
+    else:
+        print(i)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 # break
-# num=11
-# for i in range(1,num):
-#     if i==6:
-#         continue
-#     else:
-#         print(i)
+num=11
+for i in range(1,num):
+    if i==6:
+        continue
+    else:
+        print(i)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 # break
-# name="Dewang"
-# for i in name:
-#     print(i)
-# print(name[::-1]) #reverse of string
+name="Dewang"
+for i in name:
+    print(i)
+print(name[::-1]) #reverse of string
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 # break
-# names=('dewang','laptop','mobile','watch')
-# for i in names:
-#     print(i)
-# print(names[::-1])
+names=('dewang','laptop','mobile','watch')
+for i in names:
+    print(i)
+print(names[::-1])
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 # break
-# nums={12,12,12,34,5,6,4,3434,343,332,432,321,321}
-# for i in nums:
-#     print(i)
+nums={12,12,12,34,5,6,4,3434,343,332,432,321,321}
+for i in nums:
+    print(i)
 
-# print("")
+print("")
 
-# for i in sorted(nums):
-#     print(i)
+for i in sorted(nums):
+    print(i)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 # break
