@@ -1,11 +1,11 @@
-# nums=[x for x in range(1,21) if x%3==0]
-# print(nums)
+nums=[x for x in range(1,21) if x%3==0]
+print(nums)
 
 #------------------------------------------------------------------------------------------------
 
-# listing=["Python", "is", "awesome"]
-# length=[len(listing) for x in listing]
-# print(length)
+listing=["Python", "is", "awesome"]
+length=[len(listing) for x in listing]
+print(length)
 
 #----------------------------------------------------------------------------------------------------
 
