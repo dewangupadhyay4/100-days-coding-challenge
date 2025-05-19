@@ -17,19 +17,32 @@
 
 #Encapsulation
 
-class Car:
-    def __init__(self, brand, model, year):
-        self.brand=brand
-        self.__model=model
-        self.__year=year
+# class Car:
+#     def __init__(self, brand, model, year):
+#         self.brand=brand
+#         self.__model=model
+#         self.__year=year
 
-    def get_car(self):
-        return self.__model
+#     def get_car(self):
+#         return self.__model
     
-    def get_details(self):
-        print(f"The car brand is {self.brand} , model is {self.__model} and year is {self.__year}")
+#     def get_details(self):
+#         print(f"The car brand is {self.brand} , model is {self.__model} and year is {self.__year}")
 
-car= Car("Maruti","ABCS",2021)
-print(car.get_car())
+# car= Car("Maruti","ABCS",2021)
+# print(car.get_car())
 
-car.get_details()
+# car.get_details()
+
+#---------------------------------------------------------
+
+class Bird:
+    def fly(self):
+        print("This is bird flying in bird class")
+
+class Airplane:
+    def fly(self):
+        print("This is airplane flying in airplane class")
+
+for i in (Bird(), Airplane()):
+    i.fly()
