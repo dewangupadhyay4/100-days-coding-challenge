@@ -1,38 +1,38 @@
 #inheritance
-# class Employee:
-#     def works(self):
-#         print("This is Employee class")
+class Employee:
+    def works(self):
+        print("This is Employee class")
 
-# class Manager(Employee):
-#     def works(self):
-#         print("This is Manager class")
+class Manager(Employee):
+    def works(self):
+        print("This is Manager class")
 
-# employee=Employee()
-# employee.works()
+employee=Employee()
+employee.works()
 
-# manager=Manager()
-# manager.works()
+manager=Manager()
+manager.works()
 
 #---------------------------------------------------------
 
 #Encapsulation
 
-# class Car:
-#     def __init__(self, brand, model, year):
-#         self.brand=brand
-#         self.__model=model
-#         self.__year=year
+class Car:
+    def __init__(self, brand, model, year):
+        self.brand=brand
+        self.__model=model
+        self.__year=year
 
-#     def get_car(self):
-#         return self.__model
+    def get_car(self):
+        return self.__model
     
-#     def get_details(self):
-#         print(f"The car brand is {self.brand} , model is {self.__model} and year is {self.__year}")
+    def get_details(self):
+        print(f"The car brand is {self.brand} , model is {self.__model} and year is {self.__year}")
 
-# car= Car("Maruti","ABCS",2021)
-# print(car.get_car())
+car= Car("Maruti","ABCS",2021)
+print(car.get_car())
 
-# car.get_details()
+car.get_details()
 
 #---------------------------------------------------------
 
