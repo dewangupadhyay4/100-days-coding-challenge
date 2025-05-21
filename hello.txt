@@ -1,1 +1,3 @@
 Hello this new writing fileThis is second line getting added by append
+hello in second line
+hello in third line
