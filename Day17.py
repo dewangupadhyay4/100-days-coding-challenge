@@ -9,3 +9,12 @@
 #         print(line.strip())
 
 #-------------------------------------------------------------------------
+
+# file=open("hello.txt","w")
+# file.write("I am adding new line by write command")
+# file.close()
+
+#-------------------------------------------------------------------------
+file=open("hello.txt","a")
+file.write("Here i am adding new line by appending the same")
+file.close()

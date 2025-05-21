@@ -1,3 +1,1 @@
-Hello this new writing fileThis is second line getting added by append
-hello in second line
-hello in third line
+I am adding new line by write commandHere i am adding new line by appending the same
