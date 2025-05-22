@@ -11,11 +11,17 @@ from datetime import timedelta
 # birthdate=datetime.date(2003,10,22)
 # print(birthdate)
 
+# today=datetime.datetime.today()
+# print("Today: ",today)
+
+# future=today+timedelta(days=12)
+# print("12 days later: ",future)
+
+# past=today-timedelta(days=12)
+# print("Before 12 days: ",past)
+
+birtday=input("Enter your Birthday: ")
+converted=datetime.datetime.strptime(birtday,"%d-%m-%y")
 today=datetime.datetime.today()
-print("Today: ",today)
-
-future=today+timedelta(days=12)
-print("12 days later: ",future)
-
-past=today-timedelta(days=12)
-print("Before 12 days: ",past)
+left=today-converted
+print(left)
