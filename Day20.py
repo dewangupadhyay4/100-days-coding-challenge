@@ -55,3 +55,11 @@ student.show_student()
 Student.school_name()
 
 print(Student.is_adult(21))
+
+#---------------------------------------------------------------------------------------------------
+
+# 🔹 1. Instance Method
+# Defined with: def method_name(self)
+# Accesses: Instance (self) → instance variables and methods
+# Called by: An object (instance) of the class
+# Use Case: When you need to access or modify object-specific data
