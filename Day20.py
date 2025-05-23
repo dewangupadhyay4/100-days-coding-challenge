@@ -69,3 +69,9 @@ print(Student.is_adult(21))
 # Accesses: Class (cls) → class variables and methods
 # Called by: Class or object
 # Use Case: When you want to access or modify class-level data
+
+# 🔹 3. Static Method
+# Defined with: @staticmethod and def method_name()
+# Accesses: Neither class (cls) nor instance (self)
+# Called by: Class or object
+# Use Case: Utility functions that don’t depend on class or instance data
