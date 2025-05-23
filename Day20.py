@@ -63,3 +63,9 @@ print(Student.is_adult(21))
 # Accesses: Instance (self) → instance variables and methods
 # Called by: An object (instance) of the class
 # Use Case: When you need to access or modify object-specific data
+
+# 🔹 2. Class Method
+# Defined with: @classmethod and def method_name(cls)
+# Accesses: Class (cls) → class variables and methods
+# Called by: Class or object
+# Use Case: When you want to access or modify class-level data
