@@ -59,22 +59,43 @@
 
 #hierarchial inheritance
 
-class Vehicle:
-    def describe(self):
-        print("This is vehicle class")
+# class Vehicle:
+#     def describe(self):
+#         print("This is vehicle class")
 
-class Car(Vehicle):
-    def wheel(self):
-        print("This wheel is of car class")
+# class Car(Vehicle):
+#     def wheel(self):
+#         print("This wheel is of car class")
         
-class Bike(Vehicle):
-    def brake(self):
-        print("This is brake from bike class")
+# class Bike(Vehicle):
+#     def brake(self):
+#         print("This is brake from bike class")
 
-car=Car()
-bike=Bike()
+# car=Car()
+# bike=Bike()
 
-car.describe()
-car.wheel()
-bike.describe()
-bike.brake()
+# car.describe()
+# car.wheel()
+# bike.describe()
+# bike.brake()
+
+#---------------------------------------------------------------------------------------
+
+class Person:
+    def __init__(self, name):
+        self.name=name
+
+    def get_details(self):
+        print(f"Hello {self.name}")
+
+class Student(Person):
+    def __init__(self, name, marks):
+        super().__init__(name)
+        self.marks=marks
+
+    def get_marks(self):
+        print(f"Hello, {self.name} your marks are {self.marks}")
+
+student=Student("dewang",87)
+student.get_details()
+student.get_marks()
