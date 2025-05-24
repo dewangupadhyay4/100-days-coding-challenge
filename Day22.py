@@ -54,3 +54,27 @@
 # child.show_father()
 # child.show_mother()
 # child.show_child()
+
+#---------------------------------------------------------------------------------------
+
+#hierarchial inheritance
+
+class Vehicle:
+    def describe(self):
+        print("This is vehicle class")
+
+class Car(Vehicle):
+    def wheel(self):
+        print("This wheel is of car class")
+        
+class Bike(Vehicle):
+    def brake(self):
+        print("This is brake from bike class")
+
+car=Car()
+bike=Bike()
+
+car.describe()
+car.wheel()
+bike.describe()
+bike.brake()
