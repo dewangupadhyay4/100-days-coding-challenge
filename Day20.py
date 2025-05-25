@@ -1,32 +1,32 @@
-# class Person:
-#     def __init__(self, name):
-#         self.name=name
+class Person:
+    def __init__(self, name):
+        self.name=name
 
-#     def greet(self):
-#         print(f"Hello this is {self.name}")
+    def greet(self):
+        print(f"Hello this is {self.name}")
 
-# person=Person("Dewang")
-# person.greet()
-
-#---------------------------------------------------------------------------
-
-# class Employee:
-#     company="Tata Capital"
-
-#     @classmethod
-#     def show_company(cls):
-#         print(f"We work at {cls.company}")
-
-# Employee.show_company()
+person=Person("Dewang")
+person.greet()
 
 #---------------------------------------------------------------------------
 
-# class Calculator:
-#     @staticmethod
-#     def add(x, y):
-#         return x + y
+class Employee:
+    company="Tata Capital"
+
+    @classmethod
+    def show_company(cls):
+        print(f"We work at {cls.company}")
+
+Employee.show_company()
+
+#---------------------------------------------------------------------------
+
+class Calculator:
+    @staticmethod
+    def add(x, y):
+        return x + y
     
-# print(Calculator.add(5,6))
+print(Calculator.add(5,6))
 
 #---------------------------------------------------------------------------
 

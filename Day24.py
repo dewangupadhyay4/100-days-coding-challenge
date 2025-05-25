@@ -1,27 +1,27 @@
 from abc import ABC, abstractmethod
 
-# class Animal(ABC):
+class Animal(ABC):
 
-#     @abstractmethod
-#     def make_sound(self):
-#         pass
+    @abstractmethod
+    def make_sound(self):
+        pass
 
-# class Dog(Animal):
-#     def make_sound(self):
-#         print("Bark")
+class Dog(Animal):
+    def make_sound(self):
+        print("Bark")
 
-# class Cat(Animal):
-#     def make_sound(self):
-#         print("Meows")
+class Cat(Animal):
+    def make_sound(self):
+        print("Meows")
 
-# # animal=Animal()
-# # animal.make_sound() #will raise error
+# animal=Animal()
+# animal.make_sound() #will raise error
 
-# dog=Dog()
-# cat=Cat()
+dog=Dog()
+cat=Cat()
 
-# dog.make_sound()
-# cat.make_sound()
+dog.make_sound()
+cat.make_sound()
 
 #-------------------------------------------------------------------------------------------------------------------
 
