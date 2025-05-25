@@ -19,5 +19,16 @@
 
 #-------------------------------------------------------------------------------------------------------
 
+def decorated_func(func):
+    def wrapper(*args, **kwargs):
+        print("Before func runs")
+        result=func(*args, **kwargs)
+        print("After func runs")
+        return result
+    return wrapper
 
+@decorated_func
+def greet(name):
+    print(f"Hello {name}")
 
+greet("dewang")
