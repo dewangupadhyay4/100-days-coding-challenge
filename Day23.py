@@ -10,10 +10,10 @@ class Engineer(Person):
     def work(self):
         print("Engineer works")
 
-for i in (Person(), Teacher(), Engineer()):
-    print(i.work())
+# for i in (Person(), Teacher(), Engineer()):
+#     print(i.work())
 
-print()
+# print()
 
 jobs=[Person(), Teacher(), Engineer()]
 for i in jobs:
