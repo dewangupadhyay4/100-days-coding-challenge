@@ -12,3 +12,9 @@ def about(request):
 def contact(request):
     # return HttpResponse("<h1>Hello this is home page")
     return render(request, "contact/home.html")
+
+def login(request):
+    return render(request,"myapp/login.html")
+
+def register(request):
+    return render(request,"myapp/register.html")
