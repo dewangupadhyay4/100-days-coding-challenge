@@ -11,7 +11,7 @@ def about(request):
 
 def contact(request):
     # return HttpResponse("<h1>Hello this is home page")
-    return render(request, "contact/home.html")
+    return render(request, "myapp/contact.html")
 
 def login(request):
     return render(request,"myapp/login.html")
