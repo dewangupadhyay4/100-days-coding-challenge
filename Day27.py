@@ -2,40 +2,40 @@ import time
 from functools import wraps
 import random
 
-# def decorator_func(func):
-#     def wrapper():
-#         print("Before func runs")
-#         func()
-#         print("After func runs")
-#     return wrapper
+def decorator_func(func):
+    def wrapper():
+        print("Before func runs")
+        func()
+        print("After func runs")
+    return wrapper
 
-# def say_hello():
-#     print("Hello this is say_hello function")
+def say_hello():
+    print("Hello this is say_hello function")
 
-# # decorated=decorator_func(say_hello)
-# # decorated()
+# decorated=decorator_func(say_hello)
+# decorated()
 
-# @decorator_func
-# def say_bye():
-#     print("Hello this bye function")
+@decorator_func
+def say_bye():
+    print("Hello this bye function")
 
-# say_bye()
+say_bye()
 
 #-------------------------------------------------------------------------------------------------------
 
-# def decorated_func(func):
-#     def wrapper(*args, **kwargs):
-#         print("Before func runs")
-#         result=func(*args, **kwargs)
-#         print("After func runs")
-#         return result
-#     return wrapper
+def decorated_func(func):
+    def wrapper(*args, **kwargs):
+        print("Before func runs")
+        result=func(*args, **kwargs)
+        print("After func runs")
+        return result
+    return wrapper
 
-# @decorated_func
-# def greet(name):
-#     print(f"Hello {name}")
+@decorated_func
+def greet(name):
+    print(f"Hello {name}")
 
-# greet("dewang")
+greet("dewang")
 
 #-------------------------------------------------------------------------------------------------------
 
