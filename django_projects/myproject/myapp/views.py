@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .forms import ContactForm
 
 def home(request):
     # return HttpResponse("<h1>Hello this is home page")
@@ -18,3 +19,14 @@ def login(request):
 
 def register(request):
     return render(request,"myapp/register.html")
+
+def contact_view(requst):
+    form=ContactForm()
+
+    if requst.method=='POST':
+        form=ContactForm(requst.POST)
+        if form.is_valid():
+            name=form.cleaned_data['name']
+            email=form.cleaned_data['email']
+            message=form.cleaned_data['message']
+            print(name, email, message)
