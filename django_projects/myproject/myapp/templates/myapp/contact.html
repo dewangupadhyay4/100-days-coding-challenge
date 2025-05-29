@@ -1,4 +1,4 @@
-{% extends 'myapp/base.html' %}
+{% comment %} {% extends 'myapp/base.html' %}
 
 {% block title %}Contact page{% endblock %}
 
@@ -9,3 +9,19 @@
 
 {% comment %} <h1>Contact</h1>
 <p>Contact us at contact@example.com</p> {% endcomment %}
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+</head>
+<body>
+    <h2>Contact Form</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>

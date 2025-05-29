@@ -20,13 +20,15 @@ def login(request):
 def register(request):
     return render(request,"myapp/register.html")
 
-def contact_view(requst):
+def contact_view(request):
     form=ContactForm()
 
-    if requst.method=='POST':
-        form=ContactForm(requst.POST)
+    if request.method=='POST':
+        form=ContactForm(request.POST)
         if form.is_valid():
             name=form.cleaned_data['name']
             email=form.cleaned_data['email']
             message=form.cleaned_data['message']
             print(name, email, message)
+            return render(request,"myapp/thankyou.html")
+    return render(request, 'myapp/contact.html',{'form':form})
