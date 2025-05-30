@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .forms import ContactForm
+from .forms import ContactForm, FeedbackForm
+from .models import Feedback
 
 def home(request):
     # return HttpResponse("<h1>Hello this is home page")
@@ -32,3 +33,13 @@ def contact_view(request):
             print(name, email, message)
             return render(request,"myapp/thankyou.html")
     return render(request, 'myapp/contact.html',{'form':form})
+
+def feedback_view(request):
+    if request.method=='POST':
+        form=FeedbackForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request,"myapp/thankyou.html")
+        else:
+            form=FeedbackForm()
+        return render(request,"myapp/feedback.html",{'form':form})
