@@ -9,4 +9,4 @@ class ContactForm(forms.Form):
 class FeedbackForm(forms.ModelForm):
     class Meta:
         model=Feedback
-        field=['name','email','message']
+        fields=['name','email','message']

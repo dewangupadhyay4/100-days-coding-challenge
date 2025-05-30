@@ -40,6 +40,8 @@ def feedback_view(request):
         if form.is_valid():
             form.save()
             return render(request,"myapp/thankyou.html")
-        else:
-            form=FeedbackForm()
-        return render(request,"myapp/feedback.html",{'form':form})
+    else:
+        form=FeedbackForm()
+
+
+    return render(request,"myapp/feedback.html",{'form':form})
