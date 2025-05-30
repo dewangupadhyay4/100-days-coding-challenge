@@ -45,3 +45,7 @@ def feedback_view(request):
 
 
     return render(request,"myapp/feedback.html",{'form':form})
+
+def show_feedback(request):
+    feedbacks=Feedback.objects.all()
+    return render(request,"myapp/show_feedback.html",{"feedbacks ":feedbacks})
