@@ -9,4 +9,5 @@ urlpatterns = [
     path('register',views.register,name='register'),
     path('feedback/',views.feedback_view,name='feedback'),
     path('show_feedback',views.show_feedback,name='show_feedback'),
+    path('delete-feedback/<int:feedback_id>/',views.delete_feedback, name='delete_feedback'),
 ]

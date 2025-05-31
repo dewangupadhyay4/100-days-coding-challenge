@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import ContactForm, FeedbackForm
 from .models import Feedback
+from django.shortcuts import get_object_or_404
 
 def home(request):
     # return HttpResponse("<h1>Hello this is home page")
@@ -49,3 +50,8 @@ def feedback_view(request):
 def show_feedback(request):
     feedbacks=Feedback.objects.all()
     return render(request,"myapp/show_feedback.html",{"feedbacks ":feedbacks})
+
+def delete_feedback(request, feedback_id):
+    feedback=get_object_or_404(Feedback, id=feedback_id)
+    feedback.delete()
+    return redirect("show_feedback")

@@ -32,6 +32,9 @@
             <td>{{ feedback.name }}</td>
             <td>{{ feedback.email }}</td>
             <td>{{ feedback.message }}</td>
+            <td>
+                <a href="{% url 'delete_feedback' feedback.id %}" onclick="return confirm('Are you sure?')">Delete</a>
+            </td>
         </tr>
         {% endfor %}
     </table>
