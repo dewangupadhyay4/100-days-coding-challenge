@@ -55,3 +55,6 @@ def delete_feedback(request, feedback_id):
     feedback=get_object_or_404(Feedback, id=feedback_id)
     feedback.delete()
     return redirect("show_feedback")
+
+def edit_feedback(request, feedback_id):
+    feedback=get_object_or_404(request, id=feedback_id)
