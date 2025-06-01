@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .forms import ContactForm, FeedbackForm
 from .models import Feedback
 from django.shortcuts import get_object_or_404
+from django.contrib import messages
 
 def home(request):
     # return HttpResponse("<h1>Hello this is home page")
@@ -40,6 +41,7 @@ def feedback_view(request):
         form=FeedbackForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request,"Thank you your feedback has been submited")
             return render(request,"myapp/thankyou.html")
     else:
         form=FeedbackForm()
@@ -57,4 +59,13 @@ def delete_feedback(request, feedback_id):
     return redirect("show_feedback")
 
 def edit_feedback(request, feedback_id):
-    feedback=get_object_or_404(request, id=feedback_id)
+    feedback=get_object_or_404(Feedback, id=feedback_id)
+    if request.method=="POST":
+        form=FeedbackForm(request.POST, instance=feedback)
+        if form.is_valid():
+            form.save()
+            messages.success(request,"Your feedback has been updated")
+            return redirect('show_feedback')
+    else:
+        form=FeedbackForm(instance=feedback)
+    return render(request,'myapp/edit_feedback.html', {'form':form,'feedback_id':feedback_id})
