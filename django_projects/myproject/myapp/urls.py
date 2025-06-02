@@ -6,9 +6,9 @@ urlpatterns = [
     path('about/',views.about,name="about"),
     path('contact/',views.contact_view,name='contact'),
     path('login/',views.login,name='login'),
-    path('register',views.register,name='register'),
+    path('register/',views.register,name='register'),
     path('feedback/',views.feedback_view,name='feedback'),
-    path('show_feedback',views.show_feedback,name='show_feedback'),
+    path('show_feedback/',views.show_feedback,name='show_feedback'),
     path('delete-feedback/<int:feedback_id>/',views.delete_feedback, name='delete_feedback'),
     path('edit_feedback/<int:feedback_id>/',views.edit_feedback,name='edit_feedback'),
 ]
