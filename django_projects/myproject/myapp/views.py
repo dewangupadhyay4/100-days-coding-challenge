@@ -51,7 +51,7 @@ def feedback_view(request):
 
 def show_feedback(request):
     feedbacks=Feedback.objects.all()
-    return render(request,"myapp/show_feedback.html",{"feedbacks ":feedbacks})
+    return render(request,"myapp/show_feedback.html",{"feedbacks":feedbacks})
 
 def delete_feedback(request, feedback_id):
     feedback=get_object_or_404(Feedback, id=feedback_id)
