@@ -1,4 +1,6 @@
 # ✅ Register API (User Signup)
+
+
 # Create a serializer to handle user creation
 
 # Create a view for registration
